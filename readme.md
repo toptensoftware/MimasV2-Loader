@@ -2,7 +2,11 @@
 
 From here: https://github.com/jimmo/numato-mimasv2-pic-firmware
 
+## Installation
 
+Run the install.sh script
+
+> sudo ./install.sh
 
 ## Flashing the PIC
 
@@ -33,38 +37,15 @@ Remove the jumper and power-cycle the board.
 
 ## Flashing the FPGA
 
-### Using screen
+This install.sh script installs everything you need including putting the programmer
+on the path, and can be run from the command line as follows:
 
-```
-$ screen /dev/ttyACM0
-mimas> v
-1.0
-mimas> i
-202015
-mimas> f
-Ctrl-A :  exec !! sx -k /path/to/flash.bin
-```
+> mimasv2-prog --filename mydesign.bin
 
-### Using programmer.py
+(NB: Mimas-V2 requires the .bin file, not the .bit file)
 
-```
-$ python3 -m venv venv
-$ . venv/bin/activate
-$ pip install pyserial xmodem
-$ python3 programmer.py /path/to/flash.bin
-```
+See the [original project](https://github.com/jimmo/numato-mimasv2-pic-firmware) for flashing the FPGA with `screen` or `minicom`.
 
-### Using minicom
-
-```
-$ minicom -D /dev/ttyACM0
-mimas> v
-1.0
-mimas> i
-202015
-mimas> f
-Ctrl-A S
-```
 
 ## Connecting to the FPGA UART
 
