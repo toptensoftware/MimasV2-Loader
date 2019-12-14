@@ -10,6 +10,7 @@ fi
 #pip3 install pyserial xmodem
 
 cp -r ./MimasV2 /opt/
+chmod +x /opt/MimasV2/mimasv2-prog
 ln -sf /opt/MimasV2/mimasv2-prog /usr/local/bin/mimasv2-prog
 
 # Setup for use as non-root
