@@ -10,6 +10,9 @@ Run the install.sh script
 
 ## Flashing the PIC
 
+Note: this git repo includes a binary for mphidflash built for x64 linux installations but it's not put
+on the path by the install.sh.   It's there if you need it though.
+
 Connect a jumper to the FWUP header (just above the left-most seven-segment). Power up the board and it should show up as a HID device (the Microchip HID bootloader).
 
 ```
